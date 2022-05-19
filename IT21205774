@@ -3,48 +3,53 @@
 using namespace std;
 
 //Declaring Manager Class
-class Manager :
+class Manager
 {
 private:
-        id managerID[15];
-        char name[25];
-        char email[20];
-        char password[15];        
+    int managerID;
+    char name[25];
+    char email[20];
+    char password[15];
 public:
-       Manager();
-       Manager(int mID, const char* mName, const char* mMail, const char* mPass);
-       void verifyLogin();
-       void displayDetails();
-       ~Manager();
+    Manager();
+    Manager(int mID, const char* mName, const char* mMail, const char* mPass);
+    void verifyLogin();
+    void displayDetails();
+    ~Manager();
 };
 
 //Implementing Manager Class
-Manager::Manager(){}
+#include "Manager.h"
+#include<iostream>
+using namespace std;
 
-Manager::Manager(int mID, const char* mName, const char* mMail, const char* mPass);
+
+Manager::Manager() {}
+
+Manager::Manager(int mID, const char* mName, const char* mMail, const char* mPass)
 {
-  mID = managerID;
-  mName = name;
-  mMail = email;
-  mPass = password;
+	managerID = mID ;
+	strcpy_s(name, mName);
+	strcpy_s(email, mMail);
+	strcpy_s(password, mPass);
+
 }
 
-void Customer::Customer()
-{
-  cout<<"manager ID"<<mID<<endl;
-  cout<<"manager name"<<mName<<endl;
-  cout<<"manager email"<<mMail<<endl;
-  cout<<"manager password"<<mPass<<endl;
-}
-  
-void Manager::verifyLogin(){}
+void Manager::verifyLogin() {}
 
-void Manager::displayDetails(){}
+void Manager::displayDetails() {
+	cout << "manager ID" << managerID << endl;
+	cout << "manager name" << name << endl;
+	cout << "manager email" << email << endl;
+	cout << "manager password" << password << endl;
+
+}
 
 Manager::~Manager()
 {
-  cout<<"Manager deleted"<<endl;
+	cout << "Manager deleted" << endl;
 }
+
 
 //Declaring Card Class
 
