@@ -1,0 +1,138 @@
+#include "Staff.h"
+#include "Recipe.h"
+#include "Manager.h"
+#include "Card.h"
+#include "Report.h"
+#include "Payment.h"
+#include "Accountant.h"
+#include "RegisteredUser.h"
+#include "Feedback.h"
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+
+int main() {
+
+	Recipe r1;
+	Recipe r2(1, "Chocolate", 10, 20, 100, "Sweets");
+
+	r1.displayRecipe();
+	cout << endl;
+	r1.updateRecipe();
+	cout << endl;
+	r1.deleteRecipe();
+	cout << endl;
+	cout << endl;
+
+	r2.displayRecipe();
+	cout << endl;
+	r2.updateRecipe();
+	cout << endl;
+	r2.deleteRecipe();
+	cout << endl;
+
+
+	Staff s1;
+	Staff s2("hashan", "IT21205606@my.sliit.lk", "0775538377", "213/H, katuhena meewaanapalana Horana", "200105100285");
+
+	s1.displayDetails();
+	cout << endl;
+	s2.displayDetails();
+
+	Manager m1;
+	Manager m2(1, "yasiru", "yasiru@gmail.com", "yasiru22");
+
+	m1.displayDetails();
+	m1.verifyLogin();
+	m1.~Manager();
+	cout << endl;
+	cout << endl;
+
+	Card c1;
+	Card c2(2, "Credit", "2025/06/02");
+
+	c1.doTransaction();
+	c1.validatePayment();
+
+	c2.doTransaction();
+	c2.validatePayment();
+
+
+	cout << endl;
+	cout << endl;
+
+	Chef ch1(1);
+
+	ch1.displayDetails();
+	ch1.~chef();
+
+	cout << endl;
+	cout << endl;
+
+	Report Re1(22);
+
+	Re1.creatRecipeReport();
+	Re1.creatPaymentReport();
+	Re1.displayReport();
+	Re1.~Report();
+
+	cout << endl;
+	cout << endl;
+
+	Payment p1;
+	Payment p2("p001", "2022/03/02", "Credit", 2500.00);
+
+	p1.displayPayment();
+	p1.~Payment();
+
+	cout << endl;
+	cout << endl;
+
+	p2.displayPayment();
+	p2.~Payment();
+
+	cout << endl;
+	cout << endl;
+
+	Accountant Ac1;
+	Accountant Ac2(112, "Nethmi", "nethmi@gmail.com", "0771112223", "02", "200152411875");
+
+	Ac1.displayDetails();
+	Ac1.~Accountant();
+
+	cout << endl;
+	cout << endl;
+
+	Ac2.displayDetails();
+	Ac2.~Accountant();
+
+	cout << endl;
+	cout << endl;
+
+	RegisteredUser Ru1;
+	RegisteredUser Ru2(1, "amadee", "amadee@gmail.com", "amadee4322", 5, 4, 7, 3);
+
+	Ru2.EditProfile(12, "amadee", "amadee@gmail.com", "ama22");
+	Ru1.displayUserDetails();
+	Ru2.displayUserDetails();
+
+	Ru1.~RegisteredUser();
+	Ru2.~RegisteredUser();
+
+	cout << endl;
+	cout << endl;
+
+	Feedback F1;
+	Feedback F2(1, "empty empty empty", );
+
+	F1.displayDetails();
+	F2.displayDetails();
+
+	F1.~Feedback();
+	F2.~Feedback();
+
+
+	return 0;
+
+}
