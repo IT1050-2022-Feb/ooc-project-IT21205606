@@ -37,8 +37,8 @@ Recipe::Recipe(int rId, const char rName[], int pTime, int coTime, int rPrice, c
     recipe_ID = rId;
     strcpy_s(Recipe_name, rName);
     Prep_time = pTime;
-    Cook_time = rPrice;
-    price = 0;
+    Cook_time = coTime;
+    price = rPrice;
     strcpy_s(categary, cate);
 
 }
